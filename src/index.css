@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Crisp, Clean, Professional */
+    --background: 0 0% 100%;
+    /* Pure White */
+    --foreground: 222 47% 11%;
+    /* Deep Navy/Black for text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    /* Deep Navy */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 168 76% 36%;
+    /* Refined Teal - More vibrant */
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 168 40% 94%;
+    --accent-hover: 168 76% 32%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 168 76% 36%;
+
+    --radius: 0.75rem;
+    /* Slightly more rounded */
+
+    /* Custom Surface Tokens - Light Mode */
+    --surface-dark: 222 47% 11%;
+    /* Use for dark sections in light mode (like Footer) */
+    --surface-dark-foreground: 210 40% 98%;
+    --surface-elevated: 0 0% 100%;
+    /* White in light mode */
+  }
+
+  .dark {
+    /* Dark Mode - True Black / Neutral */
+    --background: 0 0% 3%;
+    /* Almost pure black */
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 5%;
+    /* Subtle separation from background */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 168 76% 45%;
+    /* Keep accent teal */
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 168 30% 15%;
+    --accent-hover: 168 76% 40%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    /* Neutral border */
+    --input: 0 0% 15%;
+    --ring: 168 76% 45%;
+
+    /* Custom Surface Tokens - Dark Mode */
+    --surface-dark: 0 0% 3%;
+    --surface-dark-foreground: 0 0% 100%;
+    --surface-elevated: 0 0% 5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    @apply w-full min-h-screen;
+    width: 100% !important;
+    min-width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-accent/30 selection:text-accent-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-6 py-24 md:px-12 lg:px-24 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    @apply bg-background/60 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-md border border-border/50 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70;
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-hover;
+  }
+
+  /* Mobile scaling for 3D products */
+  #product [style*="--laptop-scale"] {
+    --laptop-scale: 0.85;
+  }
+  #product [style*="--phone-scale"] {
+    --phone-scale: 0.75;
+  }
+
+  @media (min-width: 640px) {
+    #product [style*="--laptop-scale"] {
+      --laptop-scale: 1 !important;
+    }
+    #product [style*="--phone-scale"] {
+      --phone-scale: 1 !important;
+    }
+  }
+}
