@@ -61,11 +61,11 @@ const Navbar = () => {
             )
           )}
           <ThemeToggle />
-          <Link to="/contact">
+          {/* <Link to="/contact">
             <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent-hover">
               Request Demo
             </Button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile toggle */}
@@ -101,11 +101,11 @@ const Navbar = () => {
               </Link>
             )
           )}
-          <Link to="/contact" onClick={() => setMobileOpen(false)}>
+          {/* <Link to="/contact" onClick={() => setMobileOpen(false)}>
             <Button size="sm" className="w-full bg-accent text-accent-foreground hover:bg-accent-hover">
               Request Demo
             </Button>
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>
