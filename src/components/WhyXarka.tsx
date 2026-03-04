@@ -6,13 +6,13 @@ const pillars = [
         icon: Server,
         title: "Self-Hosted Infrastructure",
         subtitle: "Your Premises. Your Rules.",
-        desc: "Complete deployment within client infrastructure—no cloud dependency. Air-gapped capability for classified and regulated environments. Full infrastructure control: hardware, network topology, scaling.",
+        desc: "Complete deployment within client infrastructure no cloud dependency. Air-gapped capability for classified and regulated environments. Full infrastructure control: hardware, network topology, scaling.",
     },
     {
         icon: Cpu,
         title: "LLM Width & Depth",
         subtitle: "Not a wrapper. An engine.",
-        desc: "Proprietary models from 4Bn to 1Tn parameters—built from scratch. 3-layer stack: OCR + Embedding + Text LLM, each independently upgradeable. Multi-agentic orchestration for complex, multi-step reasoning.",
+        desc: "Proprietary models from 4Bn to 1Tn parameters built from scratch. 3-layer stack: OCR + Embedding + Text LLM, each independently upgradeable. Multi-agentic orchestration for complex, multi-step reasoning.",
     },
     {
         icon: ShieldCheck,
@@ -24,13 +24,13 @@ const pillars = [
         icon: Flag,
         title: "Sovereign AI",
         subtitle: "India's Intelligence. India's Control.",
-        desc: "100% Indian-origin AI—no foreign model dependencies. Aligned with India's National AI Strategy and data localization policies. Strategic asset for government, defense, and critical infrastructure.",
+        desc: "100% Indian-origin AI no foreign model dependencies. Aligned with India's National AI Strategy and data localization policies. Strategic asset for government, defense, and critical infrastructure.",
     },
     {
         icon: Layers,
         title: "Modular Architecture",
         subtitle: "Pick only what you need.",
-        desc: "Deploy OCR, embeddings, text LLM, or the full stack—your choice. From single-server POC to multi-node production clusters. RESTful and gRPC APIs for seamless enterprise integration.",
+        desc: "Deploy OCR, embeddings, text LLM, or the full stack your choice. From single-server POC to multi-node production clusters. RESTful and gRPC APIs for seamless enterprise integration.",
     },
     {
         icon: Sliders,
@@ -42,7 +42,7 @@ const pillars = [
         icon: HardDrive,
         title: "Hardware Agnostic",
         subtitle: "No hardware lock-in.",
-        desc: "Runs on NVIDIA GPUs, Intel Gaudi, or custom accelerators. Scale up or down on demand—cloud, on-prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
+        desc: "Runs on NVIDIA GPUs, Intel Gaudi, or custom accelerators. Scale up or down on demand cloud, on-prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
     },
 ];
 
@@ -59,7 +59,7 @@ const WhyXarka = () => (
                 <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Why Xarka</p>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Modular. Defensible. Built Different.</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Seven pillars that make Xarka fundamentally different—composable architecture, unbreakable security, and zero vendor lock-in.
+                    Seven pillars that make Xarka fundamentally different composable architecture, unbreakable security, and zero vendor lock-in.
                 </p>
             </motion.div>
 
