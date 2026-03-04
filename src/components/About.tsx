@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import { Target, Eye, Shield } from "lucide-react";
+import { Zap, Settings, Building2 } from "lucide-react";
 
 const pillars = [
     {
-        icon: Target,
-        title: "Our Mission",
-        desc: "Transform enterprise operations through intelligent automation, making critical services faster, more accurate, and universally accessible.",
+        icon: Zap,
+        title: "Inference — LLM API Access",
+        desc: "Access Xarka's proprietary LLM stack via simple API calls. No infrastructure overhead, no model training—just powerful, sovereign AI on tap.",
     },
     {
-        icon: Eye,
-        title: "Our Vision",
-        desc: "Become India's most trusted AI infrastructure provider — powering the next generation of professional practice across legal, medical, and technology sectors.",
+        icon: Settings,
+        title: "PaaS — Productivity as a Service",
+        desc: "Agentic AI solutions tailored to solve specific business problems and enhance productivity. We deploy, manage, and optimize—you focus on your business.",
     },
     {
-        icon: Shield,
-        title: "Our Promise",
-        desc: "Enterprise-grade reliability, unwavering data security, and AI models purpose-built for diverse industrial frameworks.",
+        icon: Building2,
+        title: "BOT — Build · Operate · Transfer",
+        desc: "Full-stack AI infrastructure deployed on your premises. After design and execution, your team takes complete ownership—models, data, and IP.",
     },
 ];
 
@@ -30,14 +30,12 @@ const About = () => (
                 transition={{ duration: 0.5 }}
                 className="mb-12 w-full"
             >
-                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">About</p>
+                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">How We Work With You</p>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-4 tracking-tight">
-                    Intelligence for the Future of Enterprise
+                    Intelligence Built for Growth
                 </h2>
                 <p className="text-muted-foreground max-w-2xl leading-relaxed text-lg">
-                    XARKA AI Technologies is an Indian AI company focused on building intelligent solutions
-                    for high-stakes enterprise sectors. From legal and medical to fintech and industrial automation,
-                    our technology empowers professionals with intelligent workflows that drive efficiency and precision.
+                    Whether you're a startup, SME, or large enterprise—we have the right engagement model for your stage and scale.
                 </p>
             </motion.div>
 

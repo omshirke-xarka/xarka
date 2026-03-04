@@ -15,13 +15,12 @@ const Hero = () => {
                 >
 
                     <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.2] pb-2 mb-6 text-balance tracking-tight">
-                        Intelligence That{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-hover">Changes the World</span>
+                        The Dawn of{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-hover">Sovereign Intelligence</span>
                     </h1>
 
                     <p className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-                        XARKA AI empowers visionaries across legal, medical, and technology sectors with enterprise-grade intelligence
-                        that defines the future. Experience solutions built to make a global impact.
+                        Enterprise-grade AI infrastructure you own and control. From LLM APIs to full-stack agentic solutions—choose the engagement model that fits your business.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">

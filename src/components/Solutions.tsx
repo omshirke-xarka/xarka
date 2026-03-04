@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle, Shield, Gavel, Cpu, Activity, ArrowRight } from "lucide-react";
+import { CheckCircle, Landmark, CreditCard, FlaskConical, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { DeviceMockup, MockupHeader } from "./ui/DeviceMockup";
 
@@ -33,61 +33,47 @@ const FeatureMockupContent = ({ mockup }: { mockup: { sidebar: string[]; cards: 
 
 const features = [
     {
-        id: "legal",
-        title: "Legal & Law Firms",
-        description: "Streamline case management, automate document drafting, and enhance legal research with our AI-powered suite designed for modern law practices.",
-        icon: Gavel,
-        points: ["Automated Case Filing", "Smart Contract Analysis", "Client Portal Integration"],
+        id: "infrastructure",
+        title: "Infrastructure",
+        description: "Smart city monitoring, construction optimization, and predictive maintenance for critical infrastructure.",
+        icon: Landmark,
+        points: ["Predictive Grid Analytics", "IoT Monitoring & Alerts", "Supply Chain Optimization"],
         color: "bg-emerald-500/10 text-emerald-500",
         mockup: {
-            url: "xarka.ai/legal",
-            sidebar: ["Case Files", "Documents", "Research"],
-            cards: ["Case Overview", "Contract Drafts", "Timeline"],
-            mainContent: "Legal AI Dashboard"
+            url: "xarka.ai/infrastructure",
+            sidebar: ["Grid Monitor", "IoT Devices", "Maintenance"],
+            cards: ["Grid Status", "Alert Log", "Performance"],
+            mainContent: "Infrastructure Intelligence Dashboard"
         }
     },
     {
-        id: "healthcare",
-        title: "Healthcare Compliance",
-        description: "Ensure HIPAA compliance and manage patient data securely. Our AI navigates complex regulatory landscapes to keep your institution protected.",
-        icon: Activity,
-        points: ["HIPAA Audit Logs", "Patient Data Privacy", "Regulatory Updates"],
+        id: "fintech",
+        title: "Fintech",
+        description: "Alternative credit scoring, fraud detection, and regulatory compliance automation for financial services.",
+        icon: CreditCard,
+        points: ["Real-Time Fraud Detection", "Alternative Credit Scoring", "Regulatory Compliance Automation"],
         color: "bg-blue-500/10 text-blue-500",
         mockup: {
-            url: "xarka.ai/healthcare",
-            sidebar: ["Patient Records", "AI Diagnostics", "Doctor Notes", "Clinical Reports"],
-            cards: ["AI Medical Insights", "Lab Results", "Prescription Tracker"],
-            mainContent: "AI-Powered Patient Care & Doctor Dashboard"
+            url: "xarka.ai/fintech",
+            sidebar: ["Risk Engine", "Compliance", "Analytics"],
+            cards: ["Risk Score", "KYC Status", "Fraud Alerts"],
+            mainContent: "Fintech AI Risk Dashboard"
         }
     },
     {
-        id: "automation",
-        title: "Enterprise Automation",
-        description: "Reduce manual workload by 70%. Automate repetitive workflows across HR, Finance, and Operations with intelligent agents.",
-        icon: Cpu,
-        points: ["Workflow Orchestration", "Intelligent Document Processing", "Cross-Platform Sync"],
+        id: "pharma",
+        title: "Pharma",
+        description: "Drug discovery acceleration, clinical trial optimization, and pharmacovigilance with real-time analysis.",
+        icon: FlaskConical,
+        points: ["Drug Discovery Acceleration", "Clinical Trial Optimization", "Pharmacovigilance & Safety"],
         color: "bg-purple-500/10 text-purple-500",
         mockup: {
-            url: "xarka.ai/automation",
-            sidebar: ["Workflows", "Tasks", "Integrations"],
-            cards: ["Pipeline Status", "Queue Monitor", "Analytics"],
-            mainContent: "Workflow Orchestration"
+            url: "xarka.ai/pharma",
+            sidebar: ["Research", "Trials", "Safety"],
+            cards: ["Discovery Pipeline", "Trial Status", "Safety Reports"],
+            mainContent: "Pharma Research Intelligence"
         }
     },
-    {
-        id: "robotics",
-        title: "AI Robotics & Ops",
-        description: "Bridge the gap between digital AI and physical operations. Manage robotic fleets and industrial IoT devices from a single dashboard.",
-        icon: Shield,
-        points: ["Fleet Management", "Predictive Maintenance", "IoT Security"],
-        color: "bg-orange-500/10 text-orange-500",
-        mockup: {
-            url: "xarka.ai/robotics",
-            sidebar: ["Fleet Map", "Devices", "Alerts"],
-            cards: ["Live Status", "Maintenance Log", "Performance"],
-            mainContent: "IoT Fleet Dashboard"
-        }
-    }
 ];
 
 const Solutions = () => {
@@ -101,11 +87,12 @@ const Solutions = () => {
 
             <div className="container w-full px-6 relative z-10">
                 <div className="mb-20 text-center max-w-3xl mx-auto">
+                    <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Focus Industries</p>
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Solutions for <span className="text-accent">Every Industry</span>
+                        Deep Domain <span className="text-accent">Expertise</span>
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        From legal tech to healthcare robotics, XARKA AI adapts to your specific operational needs with precision and power.
+                        Three industries where sovereign AI creates transformative impact—each with pre-built models and domain-specific fine-tuning.
                     </p>
                 </div>
 
@@ -187,7 +174,7 @@ const Solutions = () => {
                                             <div className="h-24 bg-accent/5 rounded-xl mb-4 border border-accent/10 p-4 font-inter">
                                                 <div className="h-4 w-1/2 bg-accent/20 rounded mb-2"></div>
                                                 <div className="h-8 w-3/4 bg-white/5 rounded text-[10px]">
-                                                    {features[activeFeature].id === "healthcare" ? "Dr. AI Assistant" : "Quick Actions"}
+                                                    {features[activeFeature].id === "pharma" ? "Research Assistant" : "Quick Actions"}
                                                 </div>
                                             </div>
                                             <div className="space-y-3">
@@ -200,7 +187,7 @@ const Solutions = () => {
                                             </div>
                                             <div className="absolute bottom-8 left-4 right-4 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10">
                                                 <div className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">
-                                                    {features[activeFeature].id === "healthcare" ? "AI Medical Module" : "Active Module"}
+                                                    {features[activeFeature].id === "pharma" ? "AI Research Module" : "Active Module"}
                                                 </div>
                                                 <div className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent font-bold text-xs sm:text-base">
                                                     {features[activeFeature].title}

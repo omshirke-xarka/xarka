@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Product", href: "/#product" },
-  { label: "Solutions", href: "/#solutions" },
-  { label: "About", href: "/#about" },
-  { label: "Careers", href: "/#careers" },
+  { label: "Solutions", href: "/#about" },
+  { label: "LawgicHub", href: "/#product" },
+  { label: "Sectors", href: "/#solutions" },
+  { label: "Why Xarka", href: "/#why-xarka" },
+  { label: "Team", href: "/#team" },
   { label: "Contact", href: "/contact" },
 ];
 

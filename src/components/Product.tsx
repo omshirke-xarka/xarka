@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Search, FileText, Mic, Workflow, Lock, ArrowRight } from "lucide-react";
+import { Search, FileText, BarChart2, ShieldCheck, Lock, ArrowRight, Workflow } from "lucide-react";
 
 const features = [
     {
         icon: Search,
-        title: "AI Legal Research",
-        desc: "Query case law, statutes, and legal precedents with natural language — powered by models trained on Indian legal data.",
+        title: "Legal Research",
+        desc: "Instant case law search across 20Mn+ judgments. Semantic search across High Court and Supreme Court judgments with citation graph analysis for precedent mapping.",
     },
     {
         icon: FileText,
-        title: "Automated Drafting",
-        desc: "Generate contracts, petitions, and legal documents in minutes with intelligent templates and contextual AI.",
+        title: "Document Intelligence",
+        desc: "Automated analysis of contracts and legal documents. Clause extraction, risk flagging, and automated summarization of lengthy legal documents.",
     },
     {
-        icon: Mic,
-        title: "Intelligent Transcription",
-        desc: "Convert court proceedings, depositions, and meetings into accurate, searchable transcripts automatically.",
+        icon: BarChart2,
+        title: "Predictive Analytics",
+        desc: "Case outcome prediction with explainable reasoning. Win probability estimation based on historical patterns with judge-specific analysis for strategy optimization.",
     },
     {
-        icon: Workflow,
-        title: "Workflow Automation",
-        desc: "Streamline case management, deadline tracking, and document routing with configurable automation pipelines.",
+        icon: ShieldCheck,
+        title: "Compliance Engine",
+        desc: "Regulatory compliance monitoring and alerts. Real-time regulatory change tracking across jurisdictions with automated compliance gap analysis.",
     },
     {
         icon: Lock,
@@ -52,13 +52,29 @@ const Product = () => (
                 transition={{ duration: 0.5 }}
                 className="mb-20 text-center"
             >
-                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Specialized Verticals</p>
+                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Case Study — Live Product</p>
                 <h2 className="text-3xl sm:text-5xl font-extrabold text-foreground mb-4 tracking-tight">LawgicHub</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-lg">
-                    Our premier legal intelligence ecosystem. A comprehensive platform designed for modern professionals
+                    AI-Powered Legal Intelligence Platform. A comprehensive platform designed for modern professionals
                     where every feature is purpose-built to accelerate high-stakes outcomes.
                 </p>
-                <div className="mt-8 flex justify-center">
+
+                {/* Stats */}
+                <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mb-4">
+                    {[
+                        { value: "20Mn+", label: "Cases Processed" },
+                        { value: "50K+", label: "Active Users" },
+                        { value: "95%", label: "Time Reduction" },
+                        { value: "< 2s", label: "Avg Response Time" },
+                    ].map((stat) => (
+                        <div key={stat.label} className="p-4 rounded-xl border border-border/50 bg-card/40 text-center">
+                            <p className="text-2xl font-extrabold text-accent">{stat.value}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-4 flex justify-center">
                     <a
                         href="https://lawgichub.com/"
                         target="_blank"
