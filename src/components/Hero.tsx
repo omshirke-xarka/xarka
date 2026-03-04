@@ -20,7 +20,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-                        Enterprise-grade AI infrastructure you own and control. From LLM APIs to full-stack agentic solutions—choose the engagement model that fits your business.
+                        Enterprise grade AI infrastructure you own and control. From LLM APIs to full stack agentic solutions choose the engagement model that fits your business.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">

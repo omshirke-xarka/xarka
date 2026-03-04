@@ -6,7 +6,7 @@ const pillars = [
         icon: Server,
         title: "Self-Hosted Infrastructure",
         subtitle: "Your Premises. Your Rules.",
-        desc: "Complete deployment within client infrastructure no cloud dependency. Air-gapped capability for classified and regulated environments. Full infrastructure control: hardware, network topology, scaling.",
+        desc: "Complete deployment within client infrastructure no cloud dependency. Air gapped capability for classified and regulated environments. Full infrastructure control: hardware, network topology, scaling.",
     },
     {
         icon: Cpu,
@@ -36,13 +36,13 @@ const pillars = [
         icon: Sliders,
         title: "Custom Fine-Tuning",
         subtitle: "Your data. Your model.",
-        desc: "Domain-specific fine-tuning on proprietary data without upstream dependency. Custom training without catastrophic forgetting. Dedicated engineering team for deployment and knowledge transfer.",
+        desc: "Domain specific fine tuning on proprietary data without upstream dependency. Custom training without catastrophic forgetting. Dedicated engineering team for deployment and knowledge transfer.",
     },
     {
         icon: HardDrive,
         title: "Hardware Agnostic",
         subtitle: "No hardware lock-in.",
-        desc: "Runs on NVIDIA GPUs, Intel Gaudi, or custom accelerators. Scale up or down on demand cloud, on-prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
+        desc: "Runs on NVIDIA GPUs, Intel Gaudi, or custom accelerators. Scale up or down on demand cloud, on prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
     },
 ];
 

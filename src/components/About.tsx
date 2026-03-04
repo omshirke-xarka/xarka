@@ -4,18 +4,18 @@ import { Zap, Settings, Building2 } from "lucide-react";
 const pillars = [
     {
         icon: Zap,
-        title: "Inference — LLM API Access",
-        desc: "Access Xarka's proprietary LLM stack via simple API calls. No infrastructure overhead, no model training—just powerful, sovereign AI on tap.",
+        title: "Inference LLM API Access",
+        desc: "Access Xarka's proprietary LLM stack via simple API calls. No infrastructure overhead, no model training just powerful, sovereign AI on tap.",
     },
     {
         icon: Settings,
-        title: "PaaS — Productivity as a Service",
-        desc: "Agentic AI solutions tailored to solve specific business problems and enhance productivity. We deploy, manage, and optimize—you focus on your business.",
+        title: "PaaS Productivity as a Service",
+        desc: "Agentic AI solutions tailored to solve specific business problems and enhance productivity. We deploy, manage, and optimize you focus on your business.",
     },
     {
         icon: Building2,
-        title: "BOT — Build · Operate · Transfer",
-        desc: "Full-stack AI infrastructure deployed on your premises. After design and execution, your team takes complete ownership—models, data, and IP.",
+        title: "BOT Build · Operate · Transfer",
+        desc: "Full stack AI infrastructure deployed on your premises. After design and execution, your team takes complete ownership models, data, and IP.",
     },
 ];
 
@@ -35,7 +35,7 @@ const About = () => (
                     Intelligence Built for Growth
                 </h2>
                 <p className="text-muted-foreground max-w-2xl leading-relaxed text-lg">
-                    Whether you're a startup, SME, or large enterprise—we have the right engagement model for your stage and scale.
+                    Whether you're a startup, SME, or large enterprise we have the right engagement model for your stage and scale.
                 </p>
             </motion.div>
 

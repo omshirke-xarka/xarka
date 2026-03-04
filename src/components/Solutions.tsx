@@ -92,7 +92,7 @@ const Solutions = () => {
                         Deep Domain <span className="text-accent">Expertise</span>
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Three industries where sovereign AI creates transformative impact—each with pre-built models and domain-specific fine-tuning.
+                        Three industries where sovereign AI creates transformative impact each with pre-built models and domain specific fine tuning.
                     </p>
                 </div>
 

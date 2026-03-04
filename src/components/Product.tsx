@@ -52,11 +52,11 @@ const Product = () => (
                 transition={{ duration: 0.5 }}
                 className="mb-20 text-center"
             >
-                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Case Study — Live Product</p>
+                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Case Study Live Product</p>
                 <h2 className="text-3xl sm:text-5xl font-extrabold text-foreground mb-4 tracking-tight">LawgicHub</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-lg">
-                    AI-Powered Legal Intelligence Platform. A comprehensive platform designed for modern professionals
-                    where every feature is purpose-built to accelerate high-stakes outcomes.
+                    AI Powered Legal Intelligence Platform. A comprehensive platform designed for modern professionals
+                    where every feature is purpose built to accelerate high stakes outcomes.
                 </p>
 
                 {/* Stats */}

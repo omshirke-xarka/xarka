@@ -13,7 +13,7 @@ const Footer = () => (
             <span className="font-bold text-foreground">XARKA AI</span>
           </div>
           <p className="text-sm leading-relaxed max-w-sm">
-            XARKA AI Technologies Private Limited builds enterprise-grade AI solutions for high-stakes
+            XARKA AI Technologies Private Limited builds enterprise grade AI solutions for high-stakes
             sectors, headquartered in Mumbai, Maharashtra.
           </p>
         </div>
