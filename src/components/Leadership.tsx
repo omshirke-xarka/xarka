@@ -45,7 +45,7 @@ const leaders = [
   {
     name: "Chandan",
     role: "Technology",
-    bio: "Overseeing the robust technical infrastructure, ensuring the three-layered intelligence stack runs securely, efficiently, and remains completely hardware agnostic.",
+    bio: "Overseeing the robust technical infrastructure, efficiently, and remains completely hardware agnostic.",
     color: "from-violet-500/20 to-indigo-500/20",
     accent: "text-violet-400",
     glow: "bg-violet-500/10"
