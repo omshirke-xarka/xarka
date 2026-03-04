@@ -37,7 +37,7 @@ const leaders = [
   {
     name: "Harshal Dhandrut",
     role: "AI & System",
-    bio: "The architect behind the neural pathways. Leading the development, fine-tuning, and systematic integration of the 120Bn parameter Arka flagship engine.",
+    bio: "The architect behind the neural pathways. Leading the development, fine-tuning, and systematic integration of Arka flagship engine.",
     color: "from-pink-500/20 to-rose-500/20",
     accent: "text-pink-400",
     glow: "bg-pink-500/10"
