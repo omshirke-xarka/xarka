@@ -36,16 +36,16 @@ const leaders = [
   },
   {
     name: "Harshal Dhandrut",
-    role: "AI & System",
-    bio: "The architect behind the neural pathways. Leading the development, fine-tuning, and systematic integration of Arka flagship engine.",
+    role: "AI Systems Architect",
+    bio: "Leads the architecture and development of intelligent AI systems, designing scalable LLM and multi-agent solutions that power and optimize Arka’s flagship engine.",
     color: "from-pink-500/20 to-rose-500/20",
     accent: "text-pink-400",
     glow: "bg-pink-500/10"
   },
   {
-    name: "Chandan",
-    role: "Technology",
-    bio: "Overseeing the robust technical infrastructure, efficiently, and remains completely hardware agnostic.",
+    name: "Chandan Kumar",
+    role: "SDE Lead Associate",
+    bio: "Leads the design and development of intelligent, scalable software powered by AI and Machine Learning, driving the integration and optimization of advanced AI capabilities within our flagship systems.",
     color: "from-violet-500/20 to-indigo-500/20",
     accent: "text-violet-400",
     glow: "bg-violet-500/10"
