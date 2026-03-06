@@ -1,18 +1,12 @@
 import { motion } from "framer-motion";
-import { Server, Cpu, ShieldCheck, Flag, Layers, Sliders, HardDrive } from "lucide-react";
+import { Server, ShieldCheck, Flag, Layers, Sliders, HardDrive } from "lucide-react";
 
 const pillars = [
     {
         icon: Server,
-        title: "Self-Hosted Infrastructure",
-        subtitle: "Your Premises. Your Rules.",
-        desc: "Complete deployment within client infrastructure no cloud dependency. Air gapped capability for classified and regulated environments. Full infrastructure control: hardware, network topology, scaling.",
-    },
-    {
-        icon: Cpu,
-        title: "LLM Width & Depth",
-        subtitle: "Not a wrapper. An engine.",
-        desc: "Proprietary models from 4Bn to 1Tn parameters built from scratch. 3-layer stack: OCR + Embedding + Text LLM, each independently upgradeable. Multi-agentic orchestration for complex, multi-step reasoning.",
+        title: "Self-Hosted Infrastructure & LLM Stack",
+        subtitle: "Your Premises. Your Engine.",
+        desc: "Complete on-premises deployment with no cloud dependency air-gapped for classified environments. Built on proprietary models from 4Bn to 1Tn parameters, with a 3-layer stack (OCR + Embedding + Text LLM), each independently upgradeable. Multi-agentic orchestration with full hardware and network control.",
     },
     {
         icon: ShieldCheck,
@@ -42,7 +36,7 @@ const pillars = [
         icon: HardDrive,
         title: "Hardware Agnostic",
         subtitle: "No hardware lock-in.",
-        desc: "Runs on NVIDIA GPUs, Intel Gaudi, or custom accelerators. Scale up or down on demand cloud, on prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
+        desc: "Runs on NVIDIA GPUs, or custom accelerators. Scale up or down on demand cloud, on prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
     },
 ];
 
@@ -59,7 +53,7 @@ const WhyXarka = () => (
                 <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Why Xarka</p>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Modular. Defensible. Built Different.</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Seven pillars that make Xarka fundamentally different composable architecture, unbreakable security, and zero vendor lock-in.
+                    Six pillars that make Xarka fundamentally different composable architecture, unbreakable security, and zero vendor lock-in.
                 </p>
             </motion.div>
 
