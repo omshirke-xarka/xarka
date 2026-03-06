@@ -1,33 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, FileText, BarChart2, ShieldCheck, Lock, ArrowRight, Workflow } from "lucide-react";
-
-const features = [
-    {
-        icon: Search,
-        title: "Legal Research",
-        desc: "Instant case law search across 20Mn+ judgments. Semantic search across High Court and Supreme Court judgments with citation graph analysis for precedent mapping.",
-    },
-    {
-        icon: FileText,
-        title: "Document Intelligence",
-        desc: "Automated analysis of contracts and legal documents. Clause extraction, risk flagging, and automated summarization of lengthy legal documents.",
-    },
-    {
-        icon: BarChart2,
-        title: "Predictive Analytics",
-        desc: "Case outcome prediction with explainable reasoning. Win probability estimation based on historical patterns with judge-specific analysis for strategy optimization.",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Compliance Engine",
-        desc: "Regulatory compliance monitoring and alerts. Real-time regulatory change tracking across jurisdictions with automated compliance gap analysis.",
-    },
-    {
-        icon: Lock,
-        title: "Enterprise Security",
-        desc: "Bank-grade encryption, role-based access controls, and full compliance with Indian data protection standards.",
-    },
-];
+import { ArrowRight, Lock } from "lucide-react";
 
 const Product = () => (
     <section id="product" className="section-padding relative overflow-hidden bg-background">
@@ -65,7 +37,7 @@ const Product = () => (
                         { value: "20Mn+", label: "Cases Processed" },
                         { value: "50K+", label: "Active Users" },
                         { value: "95%", label: "Time Reduction" },
-                        { value: "< 2s", label: "Avg Response Time" },
+                        { value: "10x", label: "Cost Saving" },
                     ].map((stat) => (
                         <div key={stat.label} className="p-4 rounded-xl border border-border/50 bg-card/40 text-center">
                             <p className="text-2xl font-extrabold text-accent">{stat.value}</p>
@@ -118,9 +90,9 @@ const Product = () => (
                             </div>
 
                             {/* Screen Content */}
-                            <div className="bg-slate-50 dark:bg-slate-950 p-5 sm:p-8 min-h-[400px]">
-                                {/* Fake browser chrome */}
-                                <div className="flex items-center gap-2 mb-6 pb-4 border-b border-black/5 dark:border-white/10">
+                            <div className="bg-slate-50 dark:bg-slate-950 min-h-[400px] overflow-hidden">
+                                {/* Browser chrome */}
+                                <div className="flex items-center gap-2 px-4 py-2 border-b border-black/5 dark:border-white/10 bg-slate-100 dark:bg-slate-900">
                                     <div className="flex gap-1.5">
                                         <div className="w-3 h-3 rounded-full bg-red-400/80"></div>
                                         <div className="w-3 h-3 rounded-full bg-yellow-400/80"></div>
@@ -133,22 +105,20 @@ const Product = () => (
                                         </div>
                                     </div>
                                 </div>
-
-                                {/* Feature Grid inside screen */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {features.map((f, i) => (
-                                        <div
-                                            key={f.title}
-                                            className="p-4 rounded-xl border border-black/5 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-sm"
-                                        >
-                                            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center mb-3">
-                                                <f.icon size={16} className="text-accent" />
-                                            </div>
-                                            <h3 className="text-xs font-bold text-foreground mb-1">{f.title}</h3>
-                                            <p className="text-[10px] text-muted-foreground leading-relaxed line-clamp-2">{f.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
+                                <img
+                                    src="/assets/Lawgichub Website White.png"
+                                    alt="LawgicHub Website"
+                                    className="w-full h-full object-cover object-top block dark:hidden"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <img
+                                    src="/assets/Lawgichub Website Black.png"
+                                    alt="LawgicHub Website"
+                                    className="w-full h-full object-cover object-top hidden dark:block"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
                             </div>
                         </div>
 
@@ -185,30 +155,30 @@ const Product = () => (
                             </div>
 
                             {/* Screen Content */}
-                            <div className="w-full h-full rounded-[2.2rem] bg-white dark:bg-slate-950 overflow-hidden relative border border-black/5 dark:border-white/5">
-                                {/* Mobile App Header */}
-                                <div className="p-6 pt-12 pb-4 border-b border-black/5 dark:border-white/5 flex flex-col gap-1">
-                                    <div className="h-4 w-24 bg-accent/20 rounded"></div>
-                                    <div className="h-2 w-32 bg-muted/40 rounded"></div>
-                                </div>
-
-                                {/* Mobile Feature List */}
-                                <div className="p-4 space-y-4">
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="flex gap-3 p-3 rounded-2xl bg-slate-100 dark:bg-white/5 border border-black/5 dark:border-white/5">
-                                            <div className="w-10 h-10 shrink-0 rounded-xl bg-accent/10 animate-pulse"></div>
-                                            <div className="space-y-2 flex-1">
-                                                <div className="h-3 w-3/4 bg-muted/40 rounded"></div>
-                                                <div className="h-2 w-full bg-muted/20 rounded"></div>
-                                            </div>
+                            <div className="w-full h-full rounded-[2.2rem] overflow-hidden border border-black/5 dark:border-white/5 flex flex-col">
+                                {/* Mobile browser chrome */}
+                                <div className="flex items-center gap-2 px-3 py-2 pt-8 bg-slate-100 dark:bg-slate-900 border-b border-black/5 dark:border-white/10 shrink-0">
+                                    <div className="flex-1">
+                                        <div className="bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-full px-3 py-1 text-[9px] text-muted-foreground flex items-center gap-1.5">
+                                            <Lock size={8} className="text-green-500 shrink-0" />
+                                            <span>lawgichub.com</span>
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
-
-                                {/* Floating Action Button */}
-                                <div className="absolute bottom-8 right-6 w-12 h-12 rounded-full bg-accent shadow-lg shadow-accent/30 flex items-center justify-center">
-                                    <Workflow size={20} className="text-white" />
-                                </div>
+                                <img
+                                    src="/assets/Lawgichub Mobile White.png"
+                                    alt="LawgicHub Mobile"
+                                    className="w-full flex-1 object-cover object-top block dark:hidden"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <img
+                                    src="/assets/Lawgichub Mobile Black.png"
+                                    alt="LawgicHub Mobile"
+                                    className="w-full flex-1 object-cover object-top hidden dark:block"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
                             </div>
 
                             {/* Side Buttons */}
