@@ -1,6 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const Footer = () => (
+const Footer = () => {
+  const location = useLocation();
+
+  const handleNavClick = (href: string) => {
+    if (href.startsWith("/#")) {
+      const id = href.slice(2);
+      if (location.pathname === "/") {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.location.href = href;
+      }
+    }
+  };
+
+  return (
   <footer className="bg-muted/50 text-muted-foreground border-t border-border">
     <div className="container-narrow px-6 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -22,6 +36,13 @@ const Footer = () => (
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
+            {/* <li><Link to="/" className="hover:text-accent transition-colors">Home</Link></li> */}
+            <li><button onClick={() => handleNavClick("/#about")} className="hover:text-accent transition-colors">Solutions</button></li>
+            <li><button onClick={() => handleNavClick("/#product")} className="hover:text-accent transition-colors">LawgicHub</button></li>
+            <li><button onClick={() => handleNavClick("/#solutions")} className="hover:text-accent transition-colors">Sectors</button></li>
+            <li><button onClick={() => handleNavClick("/#why-xarka")} className="hover:text-accent transition-colors">Why Xarka</button></li>
+            <li><button onClick={() => handleNavClick("/#team")} className="hover:text-accent transition-colors">Team</button></li>
+            <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
           </ul>
         </div>
 
@@ -40,6 +61,7 @@ const Footer = () => (
       </div>
     </div>
   </footer >
-);
+  );
+};
 
 export default Footer;
