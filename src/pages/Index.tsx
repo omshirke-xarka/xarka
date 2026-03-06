@@ -25,7 +25,7 @@ const Index = () => (
         <Product />
         <Solutions />
         <WhyXarka />
-        <CompanySnapshot />
+        {/* <CompanySnapshot /> */}
         <Leadership />
         <Careers />
       </Suspense>
