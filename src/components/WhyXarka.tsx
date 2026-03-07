@@ -1,83 +1,88 @@
 import { motion } from "framer-motion";
 import { Server, ShieldCheck, Flag, Layers, Sliders, HardDrive } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const pillars = [
-    {
-        icon: Server,
-        title: "Self-Hosted Infrastructure & LLM Stack",
-        subtitle: "Your Premises. Your Engine.",
-        desc: "Complete on-premises deployment with no cloud dependency air-gapped for classified environments. Built on proprietary models from 4Bn to 1Tn parameters, with a 3-layer stack (OCR + Embedding + Text LLM), each independently upgradeable. Multi-agentic orchestration with full hardware and network control.",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Enterprise Security",
-        subtitle: "ISO 27001 · ISO 42001 · SOC 2 · GDPR",
-        desc: "End-to-end encryption at rest and in transit with client-managed keys. Comprehensive audit trails for every inference and data access. SOC 2 Type II compliance for security, availability, and confidentiality.",
-    },
-    {
-        icon: Flag,
-        title: "Sovereign AI",
-        subtitle: "India's Intelligence. India's Control.",
-        desc: "100% Indian-origin AI no foreign model dependencies. Aligned with India's National AI Strategy and data localization policies. Strategic asset for government, defense, and critical infrastructure.",
-    },
-    {
-        icon: Layers,
-        title: "Modular Architecture",
-        subtitle: "Pick only what you need.",
-        desc: "Deploy OCR, embeddings, text LLM, or the full stack your choice. From single-server POC to multi-node production clusters. RESTful and gRPC APIs for seamless enterprise integration.",
-    },
-    {
-        icon: Sliders,
-        title: "Custom Fine-Tuning",
-        subtitle: "Your data. Your model.",
-        desc: "Domain specific fine tuning on proprietary data without upstream dependency. Custom training without catastrophic forgetting. Dedicated engineering team for deployment and knowledge transfer.",
-    },
-    {
-        icon: HardDrive,
-        title: "Hardware Agnostic",
-        subtitle: "No hardware lock-in.",
-        desc: "Runs on NVIDIA GPUs, or custom accelerators. Scale up or down on demand cloud, on prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar.",
-    },
-];
+const WhyXarka = () => {
+    const { t } = useTranslation();
 
-const WhyXarka = () => (
-    <section id="why-xarka" className="section-padding bg-muted/20 overflow-hidden">
-        <div className="container-narrow relative z-10">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="mb-12 text-center"
-            >
-                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Why Xarka</p>
-                <h2 className="text-3xl font-bold text-foreground mb-4">Modular. Defensible. Built Different.</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Six pillars that make Xarka fundamentally different composable architecture, unbreakable security, and zero vendor lock-in.
-                </p>
-            </motion.div>
+    const pillars = [
+        {
+            icon: Server,
+            title: t("whyXarka.p1.title"),
+            subtitle: t("whyXarka.p1.subtitle"),
+            desc: t("whyXarka.p1.desc"),
+        },
+        {
+            icon: ShieldCheck,
+            title: t("whyXarka.p2.title"),
+            subtitle: t("whyXarka.p2.subtitle"),
+            desc: t("whyXarka.p2.desc"),
+        },
+        {
+            icon: Flag,
+            title: t("whyXarka.p3.title"),
+            subtitle: t("whyXarka.p3.subtitle"),
+            desc: t("whyXarka.p3.desc"),
+        },
+        {
+            icon: Layers,
+            title: t("whyXarka.p4.title"),
+            subtitle: t("whyXarka.p4.subtitle"),
+            desc: t("whyXarka.p4.desc"),
+        },
+        {
+            icon: Sliders,
+            title: t("whyXarka.p5.title"),
+            subtitle: t("whyXarka.p5.subtitle"),
+            desc: t("whyXarka.p5.desc"),
+        },
+        {
+            icon: HardDrive,
+            title: t("whyXarka.p6.title"),
+            subtitle: t("whyXarka.p6.subtitle"),
+            desc: t("whyXarka.p6.desc"),
+        },
+    ];
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {pillars.map((p, i) => (
-                    <motion.div
-                        key={p.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: i * 0.07 }}
-                        className="p-6 rounded-xl border border-border/50 bg-card/40 backdrop-blur-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 group"
-                    >
-                        <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                            <p.icon size={20} className="text-accent" />
-                        </div>
-                        <h3 className="text-base font-bold text-foreground mb-1">{p.title}</h3>
-                        <p className="text-xs font-semibold text-accent mb-2">{p.subtitle}</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-                    </motion.div>
-                ))}
+    return (
+        <section id="why-xarka" className="section-padding bg-muted/20 overflow-hidden">
+            <div className="container-narrow relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-12 text-center"
+                >
+                    <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">{t("whyXarka.sectionLabel")}</p>
+                    <h2 className="text-3xl font-bold text-foreground mb-4">{t("whyXarka.heading")}</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto">
+                        {t("whyXarka.subtitle")}
+                    </p>
+                </motion.div>
+
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {pillars.map((p, i) => (
+                        <motion.div
+                            key={p.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: i * 0.07 }}
+                            className="p-6 rounded-xl border border-border/50 bg-card/40 backdrop-blur-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 group"
+                        >
+                            <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                                <p.icon size={20} className="text-accent" />
+                            </div>
+                            <h3 className="text-base font-bold text-foreground mb-1">{p.title}</h3>
+                            <p className="text-xs font-semibold text-accent mb-2">{p.subtitle}</p>
+                            <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export default WhyXarka;

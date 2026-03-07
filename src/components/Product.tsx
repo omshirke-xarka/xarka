@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Lock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const Product = () => (
+const Product = () => {
+    const { t } = useTranslation();
+
+    return (
     <section id="product" className="section-padding relative overflow-hidden bg-background">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -24,20 +28,19 @@ const Product = () => (
                 transition={{ duration: 0.5 }}
                 className="mb-20 text-center"
             >
-                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Case Study Live Product</p>
-                <h2 className="text-3xl sm:text-5xl font-extrabold text-foreground mb-4 tracking-tight">LawgicHub</h2>
+                <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">{t("product.sectionLabel")}</p>
+                <h2 className="text-3xl sm:text-5xl font-extrabold text-foreground mb-4 tracking-tight">{t("product.heading")}</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-lg">
-                    AI Powered Legal Intelligence Platform. A comprehensive platform designed for modern professionals
-                    where every feature is purpose built to accelerate high stakes outcomes.
+                    {t("product.subtitle")}
                 </p>
 
                 {/* Stats */}
                 <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mb-4">
                     {[
-                        { value: "20Mn+", label: "Cases Processed" },
-                        { value: "50K+", label: "Active Users" },
-                        { value: "95%", label: "Time Reduction" },
-                        { value: "10x", label: "Cost Saving" },
+                        { value: "20Mn+", label: t("product.stat1Label") },
+                        { value: "50K+", label: t("product.stat2Label") },
+                        { value: "95%", label: t("product.stat3Label") },
+                        { value: "10x", label: t("product.stat4Label") },
                     ].map((stat) => (
                         <div key={stat.label} className="p-4 rounded-xl border border-border/50 bg-card/40 text-center">
                             <p className="text-2xl font-extrabold text-accent">{stat.value}</p>
@@ -53,7 +56,7 @@ const Product = () => (
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-accent px-8 py-3.5 rounded-xl font-semibold hover:bg-accent/20 transition-all group shadow-sm hover:shadow-accent/10"
                     >
-                        Visit LawgicHub <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                        {t("product.visitBtn")} <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </a>
                 </div>
             </motion.div>
@@ -199,6 +202,7 @@ const Product = () => (
             </div>
         </div>
     </section>
-);
+    );
+};
 
 export default Product;

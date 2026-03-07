@@ -1,21 +1,39 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import ThemeToggle from "./ThemeToggle";
+import { useTranslation } from "react-i18next";
 
-const navItems = [
-  { label: "Solutions", href: "/#about" },
-  { label: "LawgicHub", href: "/#product" },
-  { label: "Sectors", href: "/#solutions" },
-  { label: "Why Xarka", href: "/#why-xarka" },
-  { label: "Team", href: "/#team" },
-  { label: "Contact", href: "/contact" },
+const languages = [
+  { code: "en", label: "English" },
+  { code: "hi", label: "हिन्दी" },
+  { code: "ar", label: "العربية" },
+  { code: "te", label: "తెలుగు" },
+  { code: "de", label: "Deutsch" },
+  { code: "fr", label: "Français" },
+  { code: "zh", label: "中文" },
 ];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const navItems = [
+    { labelKey: "nav.solutions", href: "/#about" },
+    { labelKey: "nav.lawgicHub", href: "/#product" },
+    { labelKey: "nav.sectors", href: "/#solutions" },
+    { labelKey: "nav.whyXarka", href: "/#why-xarka" },
+    { labelKey: "nav.team", href: "/#team" },
+    { labelKey: "nav.contact", href: "/contact" },
+  ];
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
@@ -28,6 +46,8 @@ const Navbar = () => {
       }
     }
   };
+
+  const currentLang = languages.find((l) => l.code === i18n.language) ?? languages[0];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -44,28 +64,42 @@ const Navbar = () => {
           {navItems.map((item) =>
             item.href.startsWith("/#") ? (
               <button
-                key={item.label}
+                key={item.labelKey}
                 onClick={() => handleNavClick(item.href)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item.label}
+                {t(item.labelKey)}
               </button>
             ) : (
               <Link
-                key={item.label}
+                key={item.labelKey}
                 to={item.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item.label}
+                {t(item.labelKey)}
               </Link>
             )
           )}
           <ThemeToggle />
-          {/* <Link to="/contact">
-            <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent-hover">
-              Request Demo
-            </Button>
-          </Link> */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="gap-1.5 text-muted-foreground hover:text-foreground px-2">
+                <Globe size={16} />
+                <span className="text-xs font-medium">{currentLang.label}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {languages.map((lang) => (
+                <DropdownMenuItem
+                  key={lang.code}
+                  onClick={() => i18n.changeLanguage(lang.code)}
+                  className={i18n.language === lang.code ? "text-accent font-semibold" : ""}
+                >
+                  {lang.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile toggle */}
@@ -84,28 +118,44 @@ const Navbar = () => {
           {navItems.map((item) =>
             item.href.startsWith("/#") ? (
               <button
-                key={item.label}
+                key={item.labelKey}
                 onClick={() => handleNavClick(item.href)}
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item.label}
+                {t(item.labelKey)}
               </button>
             ) : (
               <Link
-                key={item.label}
+                key={item.labelKey}
                 to={item.href}
                 onClick={() => setMobileOpen(false)}
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item.label}
+                {t(item.labelKey)}
               </Link>
             )
           )}
-          {/* <Link to="/contact" onClick={() => setMobileOpen(false)}>
-            <Button size="sm" className="w-full bg-accent text-accent-foreground hover:bg-accent-hover">
-              Request Demo
-            </Button>
-          </Link> */}
+          <div className="pt-2 border-t border-border/50">
+            <p className="text-xs text-muted-foreground mb-2">Language</p>
+            <div className="flex flex-wrap gap-2">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    i18n.changeLanguage(lang.code);
+                    setMobileOpen(false);
+                  }}
+                  className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                    i18n.language === lang.code
+                      ? "bg-accent text-accent-foreground border-accent"
+                      : "border-border text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {lang.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </nav>

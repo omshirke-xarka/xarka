@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, Landmark, CreditCard, FlaskConical, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
 import { DeviceMockup, MockupHeader } from "./ui/DeviceMockup";
+import { useTranslation } from "react-i18next";
 
 const FeatureMockupContent = ({ mockup }: { mockup: { sidebar: string[]; cards: string[]; mainContent: string } }) => (
     <div className="flex h-full">
@@ -31,53 +31,54 @@ const FeatureMockupContent = ({ mockup }: { mockup: { sidebar: string[]; cards: 
     </div>
 );
 
-const features = [
-    {
-        id: "infrastructure",
-        title: "Infrastructure",
-        description: "Smart city monitoring, construction optimization, and predictive maintenance for critical infrastructure.",
-        icon: Landmark,
-        points: ["Predictive Grid Analytics", "IoT Monitoring & Alerts", "Supply Chain Optimization"],
-        color: "bg-emerald-500/10 text-emerald-500",
-        mockup: {
-            url: "xarka.ai/infrastructure",
-            sidebar: ["Grid Monitor", "IoT Devices", "Maintenance"],
-            cards: ["Grid Status", "Alert Log", "Performance"],
-            mainContent: "Infrastructure Intelligence Dashboard"
-        }
-    },
-    {
-        id: "fintech",
-        title: "Fintech",
-        description: "Alternative credit scoring, fraud detection, and regulatory compliance automation for financial services.",
-        icon: CreditCard,
-        points: ["Real-Time Fraud Detection", "Alternative Credit Scoring", "Regulatory Compliance Automation"],
-        color: "bg-blue-500/10 text-blue-500",
-        mockup: {
-            url: "xarka.ai/fintech",
-            sidebar: ["Risk Engine", "Compliance", "Analytics"],
-            cards: ["Risk Score", "KYC Status", "Fraud Alerts"],
-            mainContent: "Fintech AI Risk Dashboard"
-        }
-    },
-    {
-        id: "pharma",
-        title: "Pharma",
-        description: "Drug discovery acceleration, clinical trial optimization, and pharmacovigilance with real-time analysis.",
-        icon: FlaskConical,
-        points: ["Drug Discovery Acceleration", "Clinical Trial Optimization", "Pharmacovigilance & Safety"],
-        color: "bg-purple-500/10 text-purple-500",
-        mockup: {
-            url: "xarka.ai/pharma",
-            sidebar: ["Research", "Trials", "Safety"],
-            cards: ["Discovery Pipeline", "Trial Status", "Safety Reports"],
-            mainContent: "Pharma Research Intelligence"
-        }
-    },
-];
-
 const Solutions = () => {
     const [activeFeature, setActiveFeature] = useState(0);
+    const { t } = useTranslation();
+
+    const features = [
+        {
+            id: "infrastructure",
+            title: t("solutions.infrastructure.title"),
+            description: t("solutions.infrastructure.description"),
+            icon: Landmark,
+            points: [t("solutions.infrastructure.p1"), t("solutions.infrastructure.p2"), t("solutions.infrastructure.p3")],
+            color: "bg-emerald-500/10 text-emerald-500",
+            mockup: {
+                url: "xarka.ai/infrastructure",
+                sidebar: ["Grid Monitor", "IoT Devices", "Maintenance"],
+                cards: ["Grid Status", "Alert Log", "Performance"],
+                mainContent: t("solutions.infrastructure.mockupMain"),
+            }
+        },
+        {
+            id: "fintech",
+            title: t("solutions.fintech.title"),
+            description: t("solutions.fintech.description"),
+            icon: CreditCard,
+            points: [t("solutions.fintech.p1"), t("solutions.fintech.p2"), t("solutions.fintech.p3")],
+            color: "bg-blue-500/10 text-blue-500",
+            mockup: {
+                url: "xarka.ai/fintech",
+                sidebar: ["Risk Engine", "Compliance", "Analytics"],
+                cards: ["Risk Score", "KYC Status", "Fraud Alerts"],
+                mainContent: t("solutions.fintech.mockupMain"),
+            }
+        },
+        {
+            id: "pharma",
+            title: t("solutions.pharma.title"),
+            description: t("solutions.pharma.description"),
+            icon: FlaskConical,
+            points: [t("solutions.pharma.p1"), t("solutions.pharma.p2"), t("solutions.pharma.p3")],
+            color: "bg-purple-500/10 text-purple-500",
+            mockup: {
+                url: "xarka.ai/pharma",
+                sidebar: ["Research", "Trials", "Safety"],
+                cards: ["Discovery Pipeline", "Trial Status", "Safety Reports"],
+                mainContent: t("solutions.pharma.mockupMain"),
+            }
+        },
+    ];
 
     return (
         <section id="solutions" className="section-padding bg-background relative overflow-hidden">
@@ -87,12 +88,12 @@ const Solutions = () => {
 
             <div className="container w-full px-6 relative z-10">
                 <div className="mb-20 text-center max-w-3xl mx-auto">
-                    <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Focus Industries</p>
+                    <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">{t("solutions.sectionLabel")}</p>
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Deep Domain <span className="text-accent">Expertise</span>
+                        {t("solutions.heading")} <span className="text-accent">{t("solutions.headingHighlight")}</span>
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Three industries where sovereign AI creates transformative impact each with pre-built models and domain specific fine tuning.
+                        {t("solutions.subtitle")}
                     </p>
                 </div>
 
@@ -136,7 +137,7 @@ const Solutions = () => {
                                                 ))}
                                             </ul>
                                             <div className="flex text-accent font-medium items-center gap-2 text-sm group-hover:gap-3 transition-all">
-                                                Learn more <ArrowRight size={16} />
+                                                {t("solutions.learnMore")} <ArrowRight size={16} />
                                             </div>
                                         </motion.div>
                                     )}
@@ -174,7 +175,7 @@ const Solutions = () => {
                                             <div className="h-24 bg-accent/5 rounded-xl mb-4 border border-accent/10 p-4 font-inter">
                                                 <div className="h-4 w-1/2 bg-accent/20 rounded mb-2"></div>
                                                 <div className="h-8 w-3/4 bg-white/5 rounded text-[10px]">
-                                                    {features[activeFeature].id === "pharma" ? "Research Assistant" : "Quick Actions"}
+                                                    {features[activeFeature].id === "pharma" ? t("solutions.pharma.researchAssistant") : t("solutions.quickActions")}
                                                 </div>
                                             </div>
                                             <div className="space-y-3">
@@ -187,7 +188,7 @@ const Solutions = () => {
                                             </div>
                                             <div className="absolute bottom-8 left-4 right-4 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10">
                                                 <div className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">
-                                                    {features[activeFeature].id === "pharma" ? "AI Research Module" : "Active Module"}
+                                                    {features[activeFeature].id === "pharma" ? t("solutions.pharma.aiResearchModule") : t("solutions.activeModule")}
                                                 </div>
                                                 <div className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent font-bold text-xs sm:text-base">
                                                     {features[activeFeature].title}
@@ -201,7 +202,7 @@ const Solutions = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     );
 };
 

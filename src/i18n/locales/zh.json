@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "solutions": "解决方案",
+    "lawgicHub": "LawgicHub",
+    "sectors": "行业",
+    "whyXarka": "为何选择 Xarka",
+    "team": "团队",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "titlePrefix": "开创",
+    "titleHighlight": "主权智能的新纪元",
+    "subtitle": "企业级 AI 基础设施，完全由您拥有和掌控。从 LLM API 到全栈智能体解决方案，选择最适合您业务的合作模式。",
+    "exploreSolutions": "探索解决方案"
+  },
+  "about": {
+    "sectionLabel": "我们如何与您合作",
+    "heading": "为增长而生的智能",
+    "subtitle": "无论您是初创企业、中小企业还是大型企业，我们都有适合您阶段和规模的合作模式。",
+    "keyHighlights": "核心亮点",
+    "inference": {
+      "title": "推理",
+      "def": "LLM API 访问",
+      "desc": "通过简单的 API 调用访问 Xarka 的专有 LLM 技术栈。无需基础设施开销、无需模型训练、无需 DevOps 烦恼——强大的主权 AI 随时可用。",
+      "f1": "低延迟 API 响应让您的应用在任何规模下都能保持快速响应。",
+      "f2": "主权数据处理确保您的输入和输出永远不会离开您的管辖范围。",
+      "f3": "兼容 OpenAI 的端点让您无需更改代码即可迁移现有集成。",
+      "f4": "按需付费定价意味着您只需为使用的部分付费，无需预先承诺。"
+    },
+    "paas": {
+      "title": "PaaS",
+      "def": "生产力即服务",
+      "desc": "专为解决特定业务问题、提升组织整体生产力而定制的智能体 AI 解决方案。我们设计、部署、管理并持续优化您的 AI 智能体。",
+      "f1": "自定义智能体工作流围绕您的实际流程设计，而不是反过来。",
+      "f2": "托管部署意味着我们处理所有基础设施，让您的团队专注于业务成果。",
+      "f3": "全天候监控与主动告警确保您的 AI 系统全天候保持可靠运行。",
+      "f4": "持续优化让您的智能体随着业务数据和需求的演进不断改进。"
+    },
+    "bot": {
+      "title": "BOT",
+      "def": "构建 · 运营 · 移交",
+      "desc": "在您的场所设计、构建和部署的全栈 AI 基础设施。我们从架构到执行全程负责，然后移交完整所有权——模型、数据管道、微调权重和所有知识产权。",
+      "f1": "本地部署将整个 AI 技术栈置于您自己的基础设施和安全边界内。",
+      "f2": "完整 IP 所有权意味着每个模型、数据集和工作流完全属于您的组织。",
+      "f3": "包含团队培训，让您的员工能够在移交后自信地运营和扩展系统。",
+      "f4": "零供应商锁定保证您永远不会依赖 Xarka 来运行您的 AI。"
+    }
+  },
+  "product": {
+    "sectionLabel": "案例研究 — 在线产品",
+    "heading": "LawgicHub",
+    "subtitle": "AI 驱动的法律智能平台。专为现代法律专业人士设计的综合平台，每项功能均旨在加速高风险业务成果的达成。",
+    "stat1Label": "已处理案件",
+    "stat2Label": "活跃用户",
+    "stat3Label": "时间缩减",
+    "stat4Label": "成本节省",
+    "visitBtn": "访问 LawgicHub"
+  },
+  "solutions": {
+    "sectionLabel": "重点行业",
+    "heading": "深度垂直",
+    "headingHighlight": "领域专长",
+    "subtitle": "三大行业，主权 AI 在其中创造变革性影响——每个行业均配备预构建模型和领域专属微调。",
+    "learnMore": "了解更多",
+    "infrastructure": {
+      "title": "基础设施",
+      "description": "针对关键基础设施的智慧城市监控、建设优化和预测性维护。",
+      "p1": "预测性电网分析",
+      "p2": "IoT 监控与告警",
+      "p3": "供应链优化",
+      "mockupMain": "基础设施智能仪表盘"
+    },
+    "fintech": {
+      "title": "金融科技",
+      "description": "面向金融服务的替代信用评分、欺诈检测和合规自动化。",
+      "p1": "实时欺诈检测",
+      "p2": "替代信用评分",
+      "p3": "监管合规自动化",
+      "mockupMain": "金融科技 AI 风险仪表盘"
+    },
+    "pharma": {
+      "title": "医药",
+      "description": "实时分析支持的药物发现加速、临床试验优化和药物警戒。",
+      "p1": "药物发现加速",
+      "p2": "临床试验优化",
+      "p3": "药物警戒与安全",
+      "mockupMain": "医药研究智能",
+      "researchAssistant": "研究助手",
+      "aiResearchModule": "AI 研究模块"
+    },
+    "quickActions": "快速操作",
+    "activeModule": "活跃模块"
+  },
+  "whyXarka": {
+    "sectionLabel": "为何选择 Xarka",
+    "heading": "模块化。可防御。与众不同。",
+    "subtitle": "六大支柱让 Xarka 与众不同——可组合架构、坚不可摧的安全性和零供应商锁定。",
+    "p1": {
+      "title": "自托管基础设施与 LLM 技术栈",
+      "subtitle": "您的场所。您的引擎。",
+      "desc": "完全本地化部署，无需依赖云服务——为机密环境提供气隙隔离。基于 40 亿至 1 万亿参数的专有模型构建，采用三层技术栈（OCR + 嵌入 + 文本 LLM）。"
+    },
+    "p2": {
+      "title": "企业级安全",
+      "subtitle": "ISO 27001 · ISO 42001 · SOC 2 · GDPR",
+      "desc": "客户管理密钥的静态和传输端到端加密。每次推理和数据访问的全面审计跟踪。SOC 2 Type II 安全、可用性和保密性合规。"
+    },
+    "p3": {
+      "title": "主权 AI",
+      "subtitle": "印度的智慧。印度的掌控。",
+      "desc": "100% 印度本土 AI——不依赖任何境外模型。与印度国家 AI 战略和数据本地化政策保持一致。政府、国防和关键基础设施的战略资产。"
+    },
+    "p4": {
+      "title": "模块化架构",
+      "subtitle": "只选您所需。",
+      "desc": "按需部署 OCR、嵌入、文本 LLM 或完整技术栈——您来决定。从单服务器 POC 到多节点生产集群均可支持。"
+    },
+    "p5": {
+      "title": "自定义微调",
+      "subtitle": "您的数据。您的模型。",
+      "desc": "在专有数据上进行领域专属微调，无需上游依赖。无灾难性遗忘的定制训练。专属工程团队负责部署和知识转移。"
+    },
+    "p6": {
+      "title": "硬件无关",
+      "subtitle": "无硬件锁定。",
+      "desc": "支持 NVIDIA GPU 或定制加速器运行。按需扩展或缩减——云端、本地或混合部署均可。"
+    }
+  },
+  "leadership": {
+    "sectionLabel": "我们的团队",
+    "heading": "机器背后的智慧",
+    "subtitle": "领导层与核心创新者",
+    "leaders": {
+      "rajat": {
+        "role": "创始人",
+        "bio": "主导 Xarka AI Technologies 的整体战略方向和技术路线图。致力于为现代企业构建可防御的主权 AI 基础设施。"
+      },
+      "rishi": {
+        "role": "联合创始人",
+        "bio": "主导商业和财务战略，确保 Xarka 复杂的工程能力转化为全球市场上可扩展的高影响力业务解决方案。"
+      },
+      "sharad": {
+        "role": "联合创始人",
+        "bio": "指导核心产品架构和创新，弥合深度技术能力与现实行业应用之间的差距。"
+      },
+      "kumud": {
+        "role": "销售与市场",
+        "bio": "推动市场拓展、GTM 战略和战略企业合作伙伴关系。专注于向高价值机构客户定位 Xarka 的差异化部署模式。"
+      },
+      "harshal": {
+        "role": "AI 系统架构师",
+        "bio": "领导智能 AI 系统的架构与开发，设计驱动 Xarka 旗舰引擎的可扩展 LLM 和多智能体解决方案。"
+      },
+      "chandan": {
+        "role": "SDE 首席助理",
+        "bio": "领导 AI 和机器学习驱动的智能、可扩展软件的设计与开发，推动先进 AI 能力在旗舰系统中的集成与优化。"
+      }
+    }
+  },
+  "careers": {
+    "sectionLabel": "招贤纳士",
+    "heading": "加入我们，共同构建企业智能层",
+    "subtitle": "我们是一个小而精、快速行动的团队，在 AI 与行业的交汇处解决有意义的问题。如果您在不确定性中茁壮成长并希望塑造一个新品类，我们期待与您相遇。",
+    "viewRoles": "查看开放职位"
+  },
+  "contact": {
+    "sectionLabel": "联系我们",
+    "heading": "与我们取得联系",
+    "subtitle": "无论您是在为法律实践探索 AI，还是希望安排演示，我们都期待与您交流。",
+    "sendMessage": "给我们发送消息",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "您@公司.com",
+    "companyPlaceholder": "您的机构",
+    "phonePlaceholder": "请输入电话号码",
+    "messagePlaceholder": "请告诉我们您的需求...",
+    "nameLabel": "姓名 *",
+    "emailLabel": "邮箱 *",
+    "companyLabel": "公司",
+    "phoneLabel": "电话号码",
+    "messageLabel": "留言 *",
+    "submitBtn": "发送消息",
+    "privacy": "您的信息将被严格保密，绝不会与第三方共享。",
+    "emailSection": "电子邮件",
+    "officeSection": "注册办公室",
+    "address": "Govandi East，孟买，\n马哈拉施特拉邦，印度",
+    "toastRequired": "请填写所有必填字段。",
+    "toastSuccess": "感谢您！",
+    "toastSuccessDesc": "我们将尽快与您联系。"
+  },
+  "footer": {
+    "description": "XARKA AI Technologies Private Limited 总部位于马哈拉施特拉邦孟买，为高风险行业提供企业级 AI 解决方案。",
+    "quickLinks": "快速链接",
+    "legal": "法律信息",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "copyright": "© {{year}} XARKA AI Technologies Private Limited. 保留所有权利。",
+    "links": {
+      "solutions": "解决方案",
+      "lawgicHub": "LawgicHub",
+      "sectors": "行业",
+      "whyXarka": "为何选择 Xarka",
+      "team": "团队",
+      "contact": "联系我们"
+    }
+  }
+}

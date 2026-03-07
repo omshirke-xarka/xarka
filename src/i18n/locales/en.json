@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "lawgicHub": "LawgicHub",
+    "sectors": "Sectors",
+    "whyXarka": "Why Xarka",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "titlePrefix": "The Dawn of",
+    "titleHighlight": "Sovereign Intelligence",
+    "subtitle": "Enterprise grade AI infrastructure you own and control. From LLM APIs to full stack agentic solutions choose the engagement model that fits your business.",
+    "exploreSolutions": "Explore Solutions"
+  },
+  "about": {
+    "sectionLabel": "How We Work With You",
+    "heading": "Intelligence Built for Growth",
+    "subtitle": "Whether you're a startup, SME, or large enterprise we have the right engagement model for your stage and scale.",
+    "keyHighlights": "Key Highlights",
+    "inference": {
+      "title": "Inference",
+      "def": "LLM API Access",
+      "desc": "Access Xarka's proprietary LLM stack via simple API calls. No infrastructure overhead, no model training, no DevOps headaches just powerful, sovereign AI on tap. Whether you're building a product, running experiments, or scaling to millions of requests, our inference layer gives you the raw capability you need without the operational complexity that usually comes with it.",
+      "f1": "Low-latency API responses keep your applications fast and responsive at any scale.",
+      "f2": "Sovereign data handling ensures your inputs and outputs never leave your jurisdiction.",
+      "f3": "OpenAI-compatible endpoints let you migrate existing integrations with zero code changes.",
+      "f4": "Pay-as-you-go pricing means you only pay for what you use, with no upfront commitment."
+    },
+    "paas": {
+      "title": "PaaS",
+      "def": "Productivity as a Service",
+      "desc": "Agentic AI solutions tailored to solve specific business problems and enhance productivity across your organization. We design, deploy, manage, and continuously optimize your AI agents so you never have to think about uptime, drift, or model updates. Your team stays focused on business outcomes while we keep the intelligence running behind the scenes.",
+      "f1": "Custom agentic workflows are designed around your exact processes, not the other way around.",
+      "f2": "Managed deployment means we handle all the infrastructure so your team stays focused on outcomes.",
+      "f3": "24/7 monitoring with proactive alerts ensures your AI systems stay reliable around the clock.",
+      "f4": "Continuous optimization keeps your agents improving as your business data and needs evolve."
+    },
+    "bot": {
+      "title": "BOT",
+      "def": "Build · Operate · Transfer",
+      "desc": "Full stack AI infrastructure designed, built, and deployed on your own premises. We handle everything from architecture to execution, then hand over complete ownership models, data pipelines, fine-tuned weights, and all intellectual property. After transfer, your team operates entirely independently with no ongoing dependency on Xarka, no licensing fees, and no external points of failure.",
+      "f1": "On-premise deployment puts the entire AI stack inside your own infrastructure and security perimeter.",
+      "f2": "Full IP ownership means every model, dataset, and workflow belongs entirely to your organization.",
+      "f3": "Team training is included so your staff can confidently operate and extend the system after handover.",
+      "f4": "Zero vendor lock-in guarantees you are never dependent on Xarka to keep your AI running."
+    }
+  },
+  "product": {
+    "sectionLabel": "Case Study Live Product",
+    "heading": "LawgicHub",
+    "subtitle": "AI Powered Legal Intelligence Platform. A comprehensive platform designed for modern professionals where every feature is purpose built to accelerate high stakes outcomes.",
+    "stat1Label": "Cases Processed",
+    "stat2Label": "Active Users",
+    "stat3Label": "Time Reduction",
+    "stat4Label": "Cost Saving",
+    "visitBtn": "Visit LawgicHub"
+  },
+  "solutions": {
+    "sectionLabel": "Focus Industries",
+    "heading": "Deep Domain",
+    "headingHighlight": "Expertise",
+    "subtitle": "Three industries where sovereign AI creates transformative impact each with pre-built models and domain specific fine tuning.",
+    "learnMore": "Learn more",
+    "infrastructure": {
+      "title": "Infrastructure",
+      "description": "Smart city monitoring, construction optimization, and predictive maintenance for critical infrastructure.",
+      "p1": "Predictive Grid Analytics",
+      "p2": "IoT Monitoring & Alerts",
+      "p3": "Supply Chain Optimization",
+      "mockupMain": "Infrastructure Intelligence Dashboard"
+    },
+    "fintech": {
+      "title": "Fintech",
+      "description": "Alternative credit scoring, fraud detection, and regulatory compliance automation for financial services.",
+      "p1": "Real-Time Fraud Detection",
+      "p2": "Alternative Credit Scoring",
+      "p3": "Regulatory Compliance Automation",
+      "mockupMain": "Fintech AI Risk Dashboard"
+    },
+    "pharma": {
+      "title": "Pharma",
+      "description": "Drug discovery acceleration, clinical trial optimization, and pharmacovigilance with real-time analysis.",
+      "p1": "Drug Discovery Acceleration",
+      "p2": "Clinical Trial Optimization",
+      "p3": "Pharmacovigilance & Safety",
+      "mockupMain": "Pharma Research Intelligence",
+      "researchAssistant": "Research Assistant",
+      "aiResearchModule": "AI Research Module"
+    },
+    "quickActions": "Quick Actions",
+    "activeModule": "Active Module"
+  },
+  "whyXarka": {
+    "sectionLabel": "Why Xarka",
+    "heading": "Modular. Defensible. Built Different.",
+    "subtitle": "Six pillars that make Xarka fundamentally different composable architecture, unbreakable security, and zero vendor lock-in.",
+    "p1": {
+      "title": "Self-Hosted Infrastructure & LLM Stack",
+      "subtitle": "Your Premises. Your Engine.",
+      "desc": "Complete on-premises deployment with no cloud dependency air-gapped for classified environments. Built on proprietary models from 4Bn to 1Tn parameters, with a 3-layer stack (OCR + Embedding + Text LLM), each independently upgradeable. Multi-agentic orchestration with full hardware and network control."
+    },
+    "p2": {
+      "title": "Enterprise Security",
+      "subtitle": "ISO 27001 · ISO 42001 · SOC 2 · GDPR",
+      "desc": "End-to-end encryption at rest and in transit with client-managed keys. Comprehensive audit trails for every inference and data access. SOC 2 Type II compliance for security, availability, and confidentiality."
+    },
+    "p3": {
+      "title": "Sovereign AI",
+      "subtitle": "India's Intelligence. India's Control.",
+      "desc": "100% Indian-origin AI no foreign model dependencies. Aligned with India's National AI Strategy and data localization policies. Strategic asset for government, defense, and critical infrastructure."
+    },
+    "p4": {
+      "title": "Modular Architecture",
+      "subtitle": "Pick only what you need.",
+      "desc": "Deploy OCR, embeddings, text LLM, or the full stack your choice. From single-server POC to multi-node production clusters. RESTful and gRPC APIs for seamless enterprise integration."
+    },
+    "p5": {
+      "title": "Custom Fine-Tuning",
+      "subtitle": "Your data. Your model.",
+      "desc": "Domain specific fine tuning on proprietary data without upstream dependency. Custom training without catastrophic forgetting. Dedicated engineering team for deployment and knowledge transfer."
+    },
+    "p6": {
+      "title": "Hardware Agnostic",
+      "subtitle": "No hardware lock-in.",
+      "desc": "Runs on NVIDIA GPUs, or custom accelerators. Scale up or down on demand cloud, on prem, or hybrid. Optimized inference pipelines for maximum throughput per dollar."
+    }
+  },
+  "leadership": {
+    "sectionLabel": "Our Team",
+    "heading": "The Minds Behind the Machine",
+    "subtitle": "Leadership & Key Innovators",
+    "leaders": {
+      "rajat": {
+        "role": "Founder",
+        "bio": "Driving the overarching strategic direction and technological roadmap of Xarka AI Technologies. Dedicated to building defensible, sovereign AI infrastructure for the modern enterprise."
+      },
+      "rishi": {
+        "role": "Co-Founder",
+        "bio": "Steering the commercial and financial strategy, ensuring Xarka's complex engineering translates into scalable, high-impact business solutions across global markets."
+      },
+      "sharad": {
+        "role": "Co-Founder",
+        "bio": "Guiding the core product architecture, innovations, and bridging the gap between deep-tech capabilities and real-world industry applications."
+      },
+      "kumud": {
+        "role": "Sales & Marketing",
+        "bio": "Driving market expansion, GTM strategy, and strategic enterprise partnerships. Focused on positioning Xarka's nuanced deployment models to high-value institutional clients."
+      },
+      "harshal": {
+        "role": "AI Systems Architect",
+        "bio": "Leads the architecture and development of intelligent AI systems, designing scalable LLM and multi-agent solutions that power and optimize Arka's flagship engine."
+      },
+      "chandan": {
+        "role": "SDE Lead Associate",
+        "bio": "Leads the design and development of intelligent, scalable software powered by AI and Machine Learning, driving the integration and optimization of advanced AI capabilities within our flagship systems."
+      }
+    }
+  },
+  "careers": {
+    "sectionLabel": "Careers",
+    "heading": "Join Us in Building the Intelligence Layer for Enterprise",
+    "subtitle": "We're a small, fast-moving team solving meaningful problems at the intersection of AI and industry. If you thrive in ambiguity and want to shape a category, we want to hear from you.",
+    "viewRoles": "View Open Roles"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading": "Get in Touch",
+    "subtitle": "Whether you're exploring AI for your legal practice or want to schedule a demo, we'd love to hear from you.",
+    "sendMessage": "Send us a message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "companyPlaceholder": "Your organization",
+    "phonePlaceholder": "Enter phone number",
+    "messagePlaceholder": "Tell us about your needs...",
+    "nameLabel": "Name *",
+    "emailLabel": "Email *",
+    "companyLabel": "Company",
+    "phoneLabel": "Phone Number",
+    "messageLabel": "Message *",
+    "submitBtn": "Send Message",
+    "privacy": "Your information is kept confidential and will never be shared with third parties.",
+    "emailSection": "Email",
+    "officeSection": "Registered Office",
+    "address": "Govandi East, Mumbai,\nMaharashtra, India",
+    "toastRequired": "Please fill in all required fields.",
+    "toastSuccess": "Thank you!",
+    "toastSuccessDesc": "We'll get back to you shortly."
+  },
+  "footer": {
+    "description": "XARKA AI Technologies Private Limited builds enterprise grade AI solutions for high-stakes sectors, headquartered in Mumbai, Maharashtra.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© {{year}} XARKA AI Technologies Private Limited. All rights reserved.",
+    "links": {
+      "solutions": "Solutions",
+      "lawgicHub": "LawgicHub",
+      "sectors": "Sectors",
+      "whyXarka": "Why Xarka",
+      "team": "Team",
+      "contact": "Contact"
+    }
+  }
+}

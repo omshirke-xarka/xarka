@@ -9,19 +9,21 @@ import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [phone, setPhone] = useState<string | undefined>(undefined);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast({ title: "Please fill in all required fields.", variant: "destructive" });
+      toast({ title: t("contact.toastRequired"), variant: "destructive" });
       return;
     }
-    toast({ title: "Thank you!", description: "We'll get back to you shortly." });
+    toast({ title: t("contact.toastSuccess"), description: t("contact.toastSuccessDesc") });
     setForm({ name: "", email: "", company: "", message: "" });
     setPhone(undefined);
   };
@@ -38,11 +40,10 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Contact</p>
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-foreground mb-6 tracking-tight">Get in Touch</h1>
+              <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">{t("contact.sectionLabel")}</p>
+              <h1 className="text-3xl sm:text-5xl font-extrabold text-foreground mb-6 tracking-tight">{t("contact.heading")}</h1>
               <p className="text-muted-foreground max-w-xl leading-relaxed text-lg">
-                Whether you're exploring AI for your legal practice or want to schedule a demo,
-                we'd love to hear from you.
+                {t("contact.subtitle")}
               </p>
             </motion.div>
           </div>
@@ -59,68 +60,68 @@ const Contact = () => {
                 className="lg:col-span-3"
               >
                 <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Send us a message</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">{t("contact.sendMessage")}</h2>
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">Name *</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">{t("contact.nameLabel")}</label>
                         <Input
                           value={form.name}
                           onChange={(e) => setForm({ ...form, name: e.target.value })}
-                          placeholder="Your name"
+                          placeholder={t("contact.namePlaceholder")}
                           maxLength={100}
                           className="bg-background"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">{t("contact.emailLabel")}</label>
                         <Input
                           type="email"
                           value={form.email}
                           onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          placeholder="you@company.com"
+                          placeholder={t("contact.emailPlaceholder")}
                           maxLength={255}
                           className="bg-background"
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Company</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t("contact.companyLabel")}</label>
                       <Input
                         value={form.company}
                         onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        placeholder="Your organization"
+                        placeholder={t("contact.companyPlaceholder")}
                         maxLength={100}
                         className="bg-background"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t("contact.phoneLabel")}</label>
                       <PhoneInput
                         international
                         defaultCountry="IN"
                         value={phone}
                         onChange={setPhone}
-                        placeholder="Enter phone number"
+                        placeholder={t("contact.phonePlaceholder")}
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Message *</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t("contact.messageLabel")}</label>
                       <Textarea
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
-                        placeholder="Tell us about your needs..."
+                        placeholder={t("contact.messagePlaceholder")}
                         rows={5}
                         maxLength={1000}
                         className="bg-background resize-none"
                       />
                     </div>
                     <Button type="submit" size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent-hover gap-2">
-                      Send Message <Send size={16} />
+                      {t("contact.submitBtn")} <Send size={16} />
                     </Button>
                     <p className="text-xs text-muted-foreground mt-4">
-                      Your information is kept confidential and will never be shared with third parties.
+                      {t("contact.privacy")}
                     </p>
                   </form>
                 </div>
@@ -135,18 +136,17 @@ const Contact = () => {
               >
                 <div className="bg-muted/30 p-6 rounded-xl border border-border/50">
                   <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                    <Mail size={18} className="text-accent" /> Email
+                    <Mail size={18} className="text-accent" /> {t("contact.emailSection")}
                   </h3>
                   <a href="mailto:xarka.tech@xarka.in" className="text-sm text-muted-foreground hover:text-accent transition-colors">xarka.tech@xarka.in</a>
                 </div>
 
                 <div className="bg-muted/30 p-6 rounded-xl border border-border/50">
                   <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                    <MapPin size={18} className="text-accent" /> Registered Office
+                    <MapPin size={18} className="text-accent" /> {t("contact.officeSection")}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Govandi East, Mumbai,<br />
-                    Maharashtra, India
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {t("contact.address")}
                   </p>
                 </div>
 

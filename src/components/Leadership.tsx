@@ -1,58 +1,19 @@
 import { motion } from "framer-motion";
 import { User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const leaders = [
-  {
-    name: "Rajat Gupta",
-    role: "Founder",
-    bio: "Driving the overarching strategic direction and technological roadmap of Xarka AI Technologies. Dedicated to building defensible, sovereign AI infrastructure for the modern enterprise.",
-    color: "from-accent/20 to-purple-500/20",
-    accent: "text-accent",
-    glow: "bg-accent/10"
-  },
-  {
-    name: "Rishi Gupta",
-    role: "Co-Founder",
-    bio: "Steering the commercial and financial strategy, ensuring Xarka's complex engineering translates into scalable, high-impact business solutions across global markets.",
-    color: "from-blue-500/20 to-cyan-500/20",
-    accent: "text-blue-400",
-    glow: "bg-blue-500/10"
-  },
-  {
-    name: "Sharad Sankaran",
-    role: "Co-Founder",
-    bio: "Guiding the core product architecture, innovations, and bridging the gap between deep-tech capabilities and real-world industry applications.",
-    color: "from-emerald-500/20 to-teal-500/20",
-    accent: "text-emerald-400",
-    glow: "bg-emerald-500/10"
-  },
-  {
-    name: "Kumud Shankar",
-    role: "Sales & Marketing",
-    bio: "Driving market expansion, GTM strategy, and strategic enterprise partnerships. Focused on positioning Xarka's nuanced deployment models to high-value institutional clients.",
-    color: "from-orange-500/20 to-yellow-500/20",
-    accent: "text-orange-400",
-    glow: "bg-orange-500/10"
-  },
-  {
-    name: "Harshal Dhandrut",
-    role: "AI Systems Architect",
-    bio: "Leads the architecture and development of intelligent AI systems, designing scalable LLM and multi-agent solutions that power and optimize Arka’s flagship engine.",
-    color: "from-pink-500/20 to-rose-500/20",
-    accent: "text-pink-400",
-    glow: "bg-pink-500/10"
-  },
-  {
-    name: "Chandan Kumar",
-    role: "SDE Lead Associate",
-    bio: "Leads the design and development of intelligent, scalable software powered by AI and Machine Learning, driving the integration and optimization of advanced AI capabilities within our flagship systems.",
-    color: "from-violet-500/20 to-indigo-500/20",
-    accent: "text-violet-400",
-    glow: "bg-violet-500/10"
-  },
+const leaderStyles = [
+  { name: "Rajat Gupta",    key: "rajat",   color: "from-accent/20 to-purple-500/20",       accent: "text-accent",      glow: "bg-accent/10" },
+  { name: "Rishi Gupta",    key: "rishi",   color: "from-blue-500/20 to-cyan-500/20",        accent: "text-blue-400",    glow: "bg-blue-500/10" },
+  { name: "Sharad Sankaran",key: "sharad",  color: "from-emerald-500/20 to-teal-500/20",     accent: "text-emerald-400", glow: "bg-emerald-500/10" },
+  { name: "Kumud Shankar",  key: "kumud",   color: "from-orange-500/20 to-yellow-500/20",    accent: "text-orange-400",  glow: "bg-orange-500/10" },
+  { name: "Harshal Dhandrut",key:"harshal", color: "from-pink-500/20 to-rose-500/20",        accent: "text-pink-400",    glow: "bg-pink-500/10" },
+  { name: "Chandan Kumar",  key: "chandan", color: "from-violet-500/20 to-indigo-500/20",    accent: "text-violet-400",  glow: "bg-violet-500/10" },
 ];
 
-const PerspectiveCard = ({ leader, index }: { leader: typeof leaders[0], index: number }) => (
+type LeaderStyle = typeof leaderStyles[0];
+
+const PerspectiveCard = ({ leader, index }: { leader: LeaderStyle & { role: string; bio: string }, index: number }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -87,36 +48,46 @@ const PerspectiveCard = ({ leader, index }: { leader: typeof leaders[0], index: 
     </motion.div>
 );
 
-const Leadership = () => (
-  <section id="team" className="section-padding relative overflow-hidden bg-background">
-    <div className="absolute inset-0 z-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none"
-      style={{
-        backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-        backgroundSize: '40px 40px',
-        maskImage: 'linear-gradient(to bottom, transparent, black, transparent)',
-      }}
-    />
+const Leadership = () => {
+  const { t } = useTranslation();
 
-    <div className="container-narrow relative z-10">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="mb-16 text-center"
-      >
-        <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Our Team</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">The Minds Behind the Machine</h2>
-        <p className="text-muted-foreground mt-3 text-sm">Leadership & Key Innovators</p>
-      </motion.div>
+  const leaders = leaderStyles.map((s) => ({
+    ...s,
+    role: t(`leadership.leaders.${s.key}.role`),
+    bio: t(`leadership.leaders.${s.key}.bio`),
+  }));
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
-        {leaders.map((leader, i) => (
-          <PerspectiveCard key={leader.name} leader={leader} index={i} />
-        ))}
+  return (
+    <section id="team" className="section-padding relative overflow-hidden bg-background">
+      <div className="absolute inset-0 z-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
+          backgroundSize: '40px 40px',
+          maskImage: 'linear-gradient(to bottom, transparent, black, transparent)',
+        }}
+      />
+
+      <div className="container-narrow relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
+        >
+          <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">{t("leadership.sectionLabel")}</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">{t("leadership.heading")}</h2>
+          <p className="text-muted-foreground mt-3 text-sm">{t("leadership.subtitle")}</p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
+          {leaders.map((leader, i) => (
+            <PerspectiveCard key={leader.name} leader={leader} index={i} />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Leadership;
