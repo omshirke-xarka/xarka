@@ -7,10 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [phone, setPhone] = useState<string | undefined>(undefined);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +23,7 @@ const Contact = () => {
     }
     toast({ title: "Thank you!", description: "We'll get back to you shortly." });
     setForm({ name: "", email: "", company: "", message: "" });
+    setPhone(undefined);
   };
 
   return (
@@ -88,6 +92,17 @@ const Contact = () => {
                         placeholder="Your organization"
                         maxLength={100}
                         className="bg-background"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
+                      <PhoneInput
+                        international
+                        defaultCountry="IN"
+                        value={phone}
+                        onChange={setPhone}
+                        placeholder="Enter phone number"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2"
                       />
                     </div>
                     <div>

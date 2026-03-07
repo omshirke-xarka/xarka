@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
+
 const About = lazy(() => import("@/components/About"));
 const Product = lazy(() => import("@/components/Product"));
 const Solutions = lazy(() => import("@/components/Solutions"));
@@ -10,6 +11,7 @@ const WhyXarka = lazy(() => import("@/components/WhyXarka"));
 const CompanySnapshot = lazy(() => import("@/components/CompanySnapshot"));
 const Leadership = lazy(() => import("@/components/Leadership"));
 const Careers = lazy(() => import("@/components/Careers"));
+const Contact = lazy(() => import("@/pages/Contact"));
 
 const SectionSkeleton = () => (
   <div className="section-padding bg-background min-h-[300px] animate-pulse" aria-hidden="true" />
@@ -28,6 +30,7 @@ const Index = () => (
         {/* <CompanySnapshot /> */}
         <Leadership />
         <Careers />
+        <Contact />
       </Suspense>
     </main>
     <Footer />
