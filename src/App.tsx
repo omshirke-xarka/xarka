@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 const RtlHandler = () => {
   const { i18n } = useTranslation();
   useEffect(() => {
-    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = "ltr";
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
   return null;

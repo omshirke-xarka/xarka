@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,15 +10,18 @@ import {
 } from "@/components/ui/dropdown-menu";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
+import IN from "country-flag-icons/react/3x2/IN";
+import ES from "country-flag-icons/react/3x2/ES";
+import DE from "country-flag-icons/react/3x2/DE";
+import FR from "country-flag-icons/react/3x2/FR";
+import CN from "country-flag-icons/react/3x2/CN";
 
 const languages = [
-  { code: "en", label: "English" },
-  { code: "hi", label: "हिन्दी" },
-  { code: "ar", label: "العربية" },
-  { code: "te", label: "తెలుగు" },
-  { code: "de", label: "Deutsch" },
-  { code: "fr", label: "Français" },
-  { code: "zh", label: "中文" },
+  { code: "en", label: "English", Flag: IN },
+  { code: "es", label: "Español", Flag: ES },
+  { code: "de", label: "Deutsch", Flag: DE },
+  { code: "fr", label: "Français", Flag: FR },
+  { code: "zh", label: "中文", Flag: CN },
 ];
 
 const Navbar = () => {
@@ -84,18 +87,19 @@ const Navbar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-1.5 text-muted-foreground hover:text-foreground px-2">
-                <Globe size={16} />
+                <currentLang.Flag className="w-4 h-auto rounded-sm" />
                 <span className="text-xs font-medium">{currentLang.label}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              {languages.map((lang) => (
+              {languages.map(({ code, label, Flag }) => (
                 <DropdownMenuItem
-                  key={lang.code}
-                  onClick={() => i18n.changeLanguage(lang.code)}
-                  className={i18n.language === lang.code ? "text-accent font-semibold" : ""}
+                  key={code}
+                  onClick={() => i18n.changeLanguage(code)}
+                  className={`gap-2 ${i18n.language === code ? "text-accent font-semibold" : ""}`}
                 >
-                  {lang.label}
+                  <Flag className="w-4 h-auto rounded-sm" />
+                  {label}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>

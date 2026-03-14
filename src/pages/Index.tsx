@@ -29,11 +29,11 @@ const Index = () => (
         <WhyXarka />
         {/* <CompanySnapshot /> */}
         <Leadership />
-        <Careers />
+        {/* <Careers /> */}
         <Contact />
       </Suspense>
     </main>
-    <Footer />
+    {/* <Footer /> */}
   </>
 );
 
