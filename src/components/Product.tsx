@@ -82,7 +82,7 @@ const Product = () => {
                         <div
                             className="relative rounded-t-2xl overflow-hidden"
                             style={{
-                                border: "6px solid transparent",
+                                // border: "6px solid transparent",
                                 borderImage: "linear-gradient(180deg, #555 0%, #333 50%, #222 100%) 1",
                                 boxShadow: "0 -2px 30px rgba(0,0,0,0.2), 0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
                             }}
