@@ -22,11 +22,9 @@ const Footer = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-7 h-7 bg-accent rounded-md flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-xs">X</span>
-            </div>
-            <span className="font-bold text-foreground">XARKA AI</span>
+          <div className="mb-4">
+            <img src="/assets/LOGO_light2.png" alt="XARKA AI" className="h-14 dark:hidden" />
+            <img src="/assets/LOGO_dark3.png" alt="XARKA AI" className="h-14 hidden dark:block" />
           </div>
           <p className="text-sm leading-relaxed max-w-sm">
             {t("footer.description")}
