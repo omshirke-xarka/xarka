@@ -24,7 +24,7 @@
       "desc": "Accédez à la pile LLM propriétaire de Xarka via de simples appels API. Pas de surcharge d'infrastructure, pas de formation de modèles, pas de maux de tête DevOps — juste une IA souveraine et puissante à portée de main.",
       "f1": "Les réponses API à faible latence maintiennent vos applications rapides et réactives à toute échelle.",
       "f2": "La gestion souveraine des données garantit que vos entrées et sorties ne quittent jamais votre juridiction.",
-      "f3": "Les points de terminaison compatibles OpenAI vous permettent de migrer les intégrations existantes sans aucune modification de code.",
+      "f3": "Les analyses d'utilisation et la surveillance intégrées vous offrent une visibilité complète sur chaque appel API et chaque jeton consommé.",
       "f4": "La tarification à l'utilisation signifie que vous ne payez que ce que vous utilisez, sans engagement initial."
     },
     "paas": {

@@ -24,7 +24,7 @@
       "desc": "Acceda al stack LLM propietario de Xarka mediante llamadas API simples. Sin sobrecarga de infraestructura, sin entrenamiento de modelos, sin dolores de cabeza DevOps — solo IA poderosa y soberana a demanda.",
       "f1": "Las respuestas API de baja latencia mantienen sus aplicaciones rápidas y responsivas a cualquier escala.",
       "f2": "El manejo soberano de datos garantiza que sus entradas y salidas nunca abandonen su jurisdicción.",
-      "f3": "Los endpoints compatibles con OpenAI le permiten migrar integraciones existentes sin cambios de código.",
+      "f3": "Los análisis de uso y el monitoreo integrados le brindan visibilidad completa de cada llamada API y cada token consumido.",
       "f4": "El precio de pago por uso significa que solo paga por lo que utiliza, sin compromiso inicial."
     },
     "paas": {
