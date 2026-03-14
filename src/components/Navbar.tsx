@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,20 +10,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
-import IN from "country-flag-icons/react/3x2/IN";
-import ES from "country-flag-icons/react/3x2/ES";
-import DE from "country-flag-icons/react/3x2/DE";
-import FR from "country-flag-icons/react/3x2/FR";
-import CN from "country-flag-icons/react/3x2/CN";
-import SA from "country-flag-icons/react/3x2/SA";
-
 const languages = [
-  { code: "en", label: "English", Flag: IN },
-  { code: "es", label: "Español", Flag: ES },
-  { code: "de", label: "Deutsch", Flag: DE },
-  { code: "fr", label: "Français", Flag: FR },
-  { code: "zh", label: "中文", Flag: CN },
-  { code: "ar", label: "العربية", Flag: SA },
+  { code: "en", label: "English" },
+  { code: "es", label: "Español" },
+  { code: "de", label: "Deutsch" },
+  { code: "fr", label: "Français" },
+  { code: "zh", label: "中文" },
+  { code: "ar", label: "العربية" },
 ];
 
 const Navbar = () => {
@@ -57,7 +50,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container-narrow flex items-center justify-between h-16 px-6">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src="/assets/LOGO_light2.png" alt="XARKA AI" className="h-14 dark:hidden" />
           <img src="/assets/LOGO_dark3.png" alt="XARKA AI" className="h-14 hidden dark:block" />
         </Link>
@@ -87,18 +80,17 @@ const Navbar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-1.5 text-muted-foreground hover:text-foreground px-2">
-                <currentLang.Flag className="w-4 h-auto rounded-sm" />
+                <Globe className="w-4 h-4" />
                 <span className="text-xs font-medium">{currentLang.label}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              {languages.map(({ code, label, Flag }) => (
+              {languages.map(({ code, label }) => (
                 <DropdownMenuItem
                   key={code}
                   onClick={() => i18n.changeLanguage(code)}
                   className={`gap-2 ${i18n.language === code ? "text-accent font-semibold" : ""}`}
                 >
-                  <Flag className="w-4 h-auto rounded-sm" />
                   {label}
                 </DropdownMenuItem>
               ))}
