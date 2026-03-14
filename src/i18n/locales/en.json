@@ -24,7 +24,7 @@
       "desc": "Access Xarka's proprietary LLM stack via simple API calls. No infrastructure overhead, no model training, no DevOps headaches just powerful, sovereign AI on tap. Whether you're building a product, running experiments, or scaling to millions of requests, our inference layer gives you the raw capability you need without the operational complexity that usually comes with it.",
       "f1": "Low-latency API responses keep your applications fast and responsive at any scale.",
       "f2": "Sovereign data handling ensures your inputs and outputs never leave your jurisdiction.",
-      "f3": "Built-in usage analytics and monitoring give you full visibility into every API call and token consumed.",
+      "f3": "Direct access to optimized LLM inference endpoints for seamless integration into your applications.",
       "f4": "Pay-as-you-go pricing means you only pay for what you use, with no upfront commitment."
     },
     "paas": {

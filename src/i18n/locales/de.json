@@ -24,7 +24,7 @@
       "desc": "Greifen Sie über einfache API-Aufrufe auf Xarkas proprietären LLM-Stack zu. Kein Infrastrukturaufwand, kein Modelltraining, keine DevOps-Kopfschmerzen — nur leistungsstarke, souveräne KI auf Abruf.",
       "f1": "Low-Latency-API-Antworten halten Ihre Anwendungen bei jeder Skalierung schnell und reaktionsfähig.",
       "f2": "Souveräne Datenverarbeitung stellt sicher, dass Ihre Ein- und Ausgaben Ihren Zuständigkeitsbereich nie verlassen.",
-      "f3": "Integrierte Nutzungsanalysen und Überwachung geben Ihnen volle Transparenz über jeden API-Aufruf und verbrauchten Token.",
+      "f3": "Direkter Zugang zu optimierten LLM-Inferenz-Endpunkten für nahtlose Integration in Ihre Anwendungen.",
       "f4": "Pay-as-you-go-Preisgestaltung bedeutet, dass Sie nur für das zahlen, was Sie nutzen, ohne Vorabverpflichtung."
     },
     "paas": {
