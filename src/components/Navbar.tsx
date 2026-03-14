@@ -15,6 +15,7 @@ import ES from "country-flag-icons/react/3x2/ES";
 import DE from "country-flag-icons/react/3x2/DE";
 import FR from "country-flag-icons/react/3x2/FR";
 import CN from "country-flag-icons/react/3x2/CN";
+import SA from "country-flag-icons/react/3x2/SA";
 
 const languages = [
   { code: "en", label: "English", Flag: IN },
@@ -22,6 +23,7 @@ const languages = [
   { code: "de", label: "Deutsch", Flag: DE },
   { code: "fr", label: "Français", Flag: FR },
   { code: "zh", label: "中文", Flag: CN },
+  { code: "ar", label: "العربية", Flag: SA },
 ];
 
 const Navbar = () => {
