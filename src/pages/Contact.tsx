@@ -16,16 +16,40 @@ const Contact = () => {
   const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [phone, setPhone] = useState<string | undefined>(undefined);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast({ title: t("contact.toastRequired"), variant: "destructive" });
       return;
     }
-    toast({ title: t("contact.toastSuccess"), description: t("contact.toastSuccessDesc") });
-    setForm({ name: "", email: "", company: "", message: "" });
-    setPhone(undefined);
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, phone }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.message || "Request failed");
+      }
+
+      toast({ title: t("contact.toastSuccess"), description: t("contact.toastSuccessDesc") });
+      setForm({ name: "", email: "", company: "", message: "" });
+      setPhone(undefined);
+    } catch {
+      toast({
+        title: t("contact.toastError"),
+        description: t("contact.toastErrorDesc"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -117,8 +141,8 @@ const Contact = () => {
                         className="bg-background resize-none"
                       />
                     </div>
-                    <Button type="submit" size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent-hover gap-2">
-                      {t("contact.submitBtn")} <Send size={16} />
+                    <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent-hover gap-2">
+                      {isSubmitting ? t("contact.submitting") : t("contact.submitBtn")} <Send size={16} />
                     </Button>
                     <p className="text-xs text-muted-foreground mt-4">
                       {t("contact.privacy")}
